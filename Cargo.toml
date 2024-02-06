@@ -1,0 +1,22 @@
+[package]
+name = "nym_client_server"
+version = "0.1.0"
+edition = "2021"
+
+
+[[bin]]
+name = "nym_client"
+path = "bin/nym_client.rs"
+
+[[bin]]
+name = "nym_server"
+path = "bin/nym_server.rs"
+
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+nym-sdk = { git = "https://github.com/nymtech/nym", branch = "master" }
+nym-sphinx-addressing = { git = "https://github.com/nymtech/nym", branch = "master" }
+nym-validator-client = { git = "https://github.com/nymtech/nym", branch = "master" }
+nym-bin-common = { git = "https://github.com/nymtech/nym", branch = "master" }
+nym-sphinx-anonymous-replies = { git = "https://github.com/nymtech/nym", branch = "master" }
