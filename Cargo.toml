@@ -3,7 +3,6 @@ name = "nym_client_server"
 version = "0.1.0"
 edition = "2021"
 
-
 [[bin]]
 name = "nym_client"
 path = "bin/nym_client.rs"
@@ -12,9 +11,17 @@ path = "bin/nym_client.rs"
 name = "nym_server"
 path = "bin/nym_server.rs"
 
+[[bin]]
+name = "nym_client_socks5"
+path = "bin/nym_client_socks5.rs"
+
+[[bin]]
+name = "nym_server_socks5"
+path = "bin/nym_server_socks5.rs"
 
 [dependencies]
 tokio = { version = "1", features = ["full"] }
+tokio-socks = "0.5"
 nym-sdk = { git = "https://github.com/nymtech/nym", branch = "master" }
 nym-sphinx-addressing = { git = "https://github.com/nymtech/nym", branch = "master" }
 nym-validator-client = { git = "https://github.com/nymtech/nym", branch = "master" }
